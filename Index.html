@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Store</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }body {
+  margin: 0;
+  min-height: 100vh;
+  background: url('https://share.google/NbCeLT5mhOAxx9fkT') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Top Navigation */
+.navbar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-links button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Sections */
+.section {
+  display: none;
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  min-height: calc(100vh - 70px);
+}
+
+.section.active {
+  display: block;
+}
+
+/* Vendor Grid */
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vendor-card {
+  text-align: center;
+}
+
+.vendor-card a img {
+  width: 100%;
+  max-width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.vendor-card a img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+.vendor-card p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #4fd1ff, #007bff);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.buy-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Info Section */
+.info-box {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.info-box span {
+  color: #4fd1ff;
+  font-weight: bold;
+}
+
+  </style>
+</head>
+<body>  <div class="navbar">
+    <h1>Vendor Marketplace</h1>
+    <div class="nav-links">
+      <button onclick="showSection('vendors')">Vendors</button>
+      <button onclick="showSection('info')">My Info</button>
+    </div>
+  </div>  <!-- Vendors Section -->  <div id="vendors" class="section active">
+    <div class="vendor-grid"><div class="vendor-card">
+    <a href="https://share.google/70l2FfWU5qGYivgQQ" target="_blank">
+      <img src="https://crdms.images.consumerreports.org/f_auto,w_600/prod/products/cr/models/411891-noise-canceling-headphones-apple-airpods-pro-2nd-generation-with-magsafe-case-usb-c-10036575.png" alt="AirPods Vendor">
+    </a>
+    <p>AirPods Vendor</p>
+    <p>$5</p>
+    <a class="buy-btn" href="YOUR_STRIPE_PAYMENT_LINK_HERE" target="_blank">Buy Vendor</a>
+  </div>
+
+</div>
+
+  </div>  <!-- Info Section -->  <div id="info" class="section">
+    <div class="info-box">
+      <p>If you need any help or have questions about vendors, feel free to reach out.</p>
+      <p>Email me at: <span>jjismyname123321@gmail.com</span></p>
+      <p>I’m always happy to help you get started 💪</p>
+    </div>
+  </div>  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script></body>
+</html>

@@ -38,7 +38,7 @@
   border: none;
   color: #fff;
   font-size: 16px;
-  margin-left: 20px;
+  margin-left: 12px;
   cursor: pointer;
   padding: 8px 14px;
   border-radius: 6px;
@@ -113,6 +113,10 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
+.free-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
 .info-box {
   max-width: 600px;
   margin: 0 auto;
@@ -131,10 +135,35 @@
 <body>  <div class="navbar">
     <h1>Vendor Marketplace</h1>
     <div class="nav-links">
-      <button onclick="showSection('vendors')">Vendors</button>
+      <button onclick="showSection('free')">Free</button>
+      <button onclick="showSection('paid')">Paid</button>
       <button onclick="showSection('info')">My Info</button>
     </div>
-  </div>  <div id="vendors" class="section active">
+  </div>  <!-- FREE SECTION (DEFAULT) -->  <div id="free" class="section active">
+    <div class="vendor-grid"><div class="vendor-card">
+    <img src="https://www.jacketfever.com/wp-content/uploads/2024/06/spider-hoodie-pink.webp" alt="Clothing Vendor">
+    <p>Clothing Vendor (Free)</p>
+    <p>$0</p>
+    <a class="buy-btn free-btn" href="https://www.mediafire.com/file/ghlijc270kaejhr/Vendor-number.txt/file" target="_blank">Get Free</a>
+  </div>
+
+  <div class="vendor-card">
+    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.61856.jpg" alt="Cologne Vendor">
+    <p>Cologne Vendor (Free)</p>
+    <p>$0</p>
+    <a class="buy-btn free-btn" href="https://www.mediafire.com/file/ghlijc270kaejhr/Vendor-number.txt/file" target="_blank">Get Free</a>
+  </div>
+
+  <div class="vendor-card">
+    <img src="https://crdms.images.consumerreports.org/f_auto,w_600/prod/products/cr/models/411891-noise-canceling-headphones-apple-airpods-pro-2nd-generation-with-magsafe-case-usb-c-10036575.png" alt="AirPods Vendor">
+    <p>AirPods Vendor (Free)</p>
+    <p>$0</p>
+    <a class="buy-btn free-btn" href="https://www.mediafire.com/file/ghlijc270kaejhr/Vendor-number.txt/file" target="_blank">Get Free</a>
+  </div>
+
+</div>
+
+  </div>  <!-- PAID SECTION -->  <div id="paid" class="section">
     <div class="vendor-grid"><div class="vendor-card">
     <img src="https://www.jacketfever.com/wp-content/uploads/2024/06/spider-hoodie-pink.webp" alt="Clothing Vendor">
     <p>Clothing Vendor</p>
@@ -158,11 +187,11 @@
 
 </div>
 
-  </div>  <div id="info" class="section">
+  </div>  <!-- INFO SECTION -->  <div id="info" class="section">
     <div class="info-box">
       <p>If you need any help or have questions about vendors, feel free to reach out.</p>
       <p>Email me at: <span>jjismyname123321@gmail.com</span></p>
-      <p>I’m always happy to help you get started 💪</p>
+      <p>Digital products are delivered after checkout. No physical items are shipped.</p>
     </div>
   </div>  <script>
     function showSection(sectionId) {
